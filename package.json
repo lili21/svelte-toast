@@ -2,7 +2,7 @@
   "name": "svelte-toast",
   "version": "0.1.0",
   "description": "simple toast, write by svelte",
-  "main": "index.js",
+  "main": "svelte-toast.js",
   "repository": "git@github.com:lili21/svelte-toast.git",
   "author": "li.li",
   "license": "MIT",
@@ -14,5 +14,9 @@
     "rollup": "^0.41.6",
     "rollup-plugin-buble": "^0.15.0",
     "rollup-plugin-svelte": "^1.8.1"
+  },
+  "script": {
+    "build": "rollup --config rollup.config.js",
+    "prepublish": "npm run build"
   }
 }
