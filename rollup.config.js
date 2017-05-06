@@ -5,7 +5,7 @@ import svelte from 'rollup-plugin-svelte'
 export default {
   entry: 'index.js',
   dest: 'svelte-toast.js',
-  format: 'umd',
+  format: 'cjs',
   plugins: [
     svelte({
       include: 'src/*.svelte',
