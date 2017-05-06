@@ -3,7 +3,7 @@
 
 ### Demo
 
-[svelte-toast.surge.sh](svelte-toast.surge.sh)
+[svelte-toast.surge.sh](https://svelte-toast.surge.sh/)
 
 ### Installation
 
