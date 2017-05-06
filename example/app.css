@@ -1,0 +1,21 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#svelte-toast-demo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast-btn {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  background: #4190fe;
+  color: #FFF;
+  text-align: center;
+}

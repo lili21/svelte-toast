@@ -2,6 +2,10 @@ svelte-toast
 ============
 > a simple toast wirten by svelte
 
+Demo
+----
+[svelte-toast.surge.sh](svelte-toast.surge.sh)
+
 Installation
 ------------
 

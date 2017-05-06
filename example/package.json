@@ -1,0 +1,24 @@
+{
+  "name": "svelte-toast-demo",
+  "version": "1.0.0",
+  "description": "demo for svelte-toast",
+  "main": "index.js",
+  "author": "li.li",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.0",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "svelte-toast": "^0.1.0-beta"
+  },
+  "scripts": {
+    "start": "webpack --progress --watch --config webpack.dev.js",
+    "server": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
+  }
+}
