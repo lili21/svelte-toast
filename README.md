@@ -1,20 +1,21 @@
 svelte-toast
-============
+------------
 > a simple toast wirten by svelte
 
 Demo
-----
+====
+
 [svelte-toast.surge.sh](svelte-toast.surge.sh)
 
 Installation
-------------
+============
 
 ```
 yarn add svelte-toast
 ```
 
 Usage
------
+=====
 
 ```
 import Toast from 'svelte-toast'
@@ -28,9 +29,13 @@ toast.error('Hello Svelte'[, opts])
 ```
 
 Options
--------
+=======
 
 option | description | values | default
 ------ | ----------- | ------ | -------
 position | position of toast | 'top-left', 'top-center', 'top-right', 'bottom-left', 'bottom-center', 'bottom-right' | 'bottom-center'
 duration | display time of toast | in millisecond | 2000
+
+Lisence
+=======
+MIT
