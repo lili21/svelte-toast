@@ -201,7 +201,7 @@ function create_main_fragment ( state, component ) {
 	var div_class_value, div_1_class_value, text_value;
 
 	var div = createElement( 'div' );
-	setAttribute( div, 'svelte-1640638710', '' );
+	setAttribute( div, 'svelte-17148720', '' );
 	div.className = div_class_value = "toast-container " + ( state._position );
 	var div_1 = createElement( 'div' );
 	appendNode( div_1, div );
@@ -319,6 +319,10 @@ Toast.prototype._show = function _show (msg, opts, type) {
       postion: _opts.postion
     }
   });
+
+  setTimeout(function () {
+    t.set({ type: t.get('type') + ' ' + 'anim' });
+  }, 0);
 
   setTimeout(function () {
     t.destroy();

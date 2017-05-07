@@ -36,6 +36,10 @@ class Toast {
     })
 
     setTimeout(() => {
+      t.set({ type: t.get('type') + ' ' + 'anim' })
+    }, 0)
+
+    setTimeout(() => {
       t.destroy()
     }, _opts.duration)
   }

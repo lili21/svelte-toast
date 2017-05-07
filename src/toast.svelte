@@ -56,27 +56,20 @@
     text-overflow: ellipsis;
   }
   .info {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
     background-color: #0091EA;
   }
   .success {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
     background-color: #4CAF50;
   }
   .error {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
     background-color: #F44336;
   }
   .default {
+    background-color: #353535;
+  }
+  .anim {
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    background-color: #353535;
   }
 </style>
