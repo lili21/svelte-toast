@@ -2790,9 +2790,9 @@ supports-color@^3.1.0, supports-color@^3.1.1, supports-color@^3.2.3:
   dependencies:
     has-flag "^1.0.0"
 
-svelte-toast@^0.1.0-beta:
-  version "0.1.0-beta"
-  resolved "https://registry.yarnpkg.com/svelte-toast/-/svelte-toast-0.1.0-beta.tgz#b7aef8c12686689abe6f2a3a23a5f47d968ceecf"
+svelte-toast@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/svelte-toast/-/svelte-toast-0.1.1.tgz#ea39eb324a39291b2bb378f5d99dac6fdb263db6"
 
 svgo@^0.7.0:
   version "0.7.2"
