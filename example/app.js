@@ -17,13 +17,13 @@ ready(function () {
       const r = Math.random()
       // toast.success('Hello Svelte Toast')
       if (r < 0.25) {
-        toast.show('Hello Svelte Toast -- toast.show')
+        toast.show('Toast -- toast.show')
       } else if (r < 0.5) {
-        toast.info('Hello Svelte Toast -- toast.info')
+        toast.info('Toast -- toast.info')
       } else if (r < 0.75) {
-        toast.success('Hello Svelte Toast -- toast.success')
+        toast.success('Toast -- toast.success')
       } else {
-        toast.error('Hello Svelte Toast -- toast.error')
+        toast.error('Toast -- toast.error')
       }
     }
   })
