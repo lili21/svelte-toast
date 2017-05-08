@@ -18,5 +18,8 @@
   "scripts": {
     "build": "rollup --config rollup.config.js",
     "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "object-assign": "^4.1.1"
   }
 }

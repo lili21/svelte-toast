@@ -1,6 +1,10 @@
 'use strict';
 
-function assign ( target ) {
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var assign = _interopDefault(require('object-assign'));
+
+function assign$1 ( target ) {
 	var arguments$1 = arguments;
 
 	for ( var i = 1; i < arguments.length; i += 1 ) {
@@ -153,7 +157,7 @@ function on ( eventName, handler ) {
 }
 
 function set ( newState ) {
-	this._set( assign( {}, newState ) );
+	this._set( assign$1( {}, newState ) );
 	this._root._flush();
 }
 
@@ -238,7 +242,7 @@ function create_main_fragment ( state, component ) {
 
 function Toast$2 ( options ) {
 	options = options || {};
-	this._state = assign( template.data(), options.data );
+	this._state = assign$1( template.data(), options.data );
 	recompute( this._state, this._state, {}, true );
 
 	this._observers = {
@@ -257,11 +261,11 @@ function Toast$2 ( options ) {
 	if ( options.target ) { this._fragment.mount( options.target, null ); }
 }
 
-assign( Toast$2.prototype, proto );
+assign$1( Toast$2.prototype, proto );
 
 Toast$2.prototype._set = function _set ( newState ) {
 	var oldState = this._state;
-	this._state = assign( {}, oldState, newState );
+	this._state = assign$1( {}, oldState, newState );
 	recompute( this._state, newState, oldState, false );
 	dispatchObservers( this, this._observers.pre, newState, oldState );
 	if ( this._fragment ) { this._fragment.update( newState, this._state ); }
@@ -310,7 +314,7 @@ Toast.prototype.error = function error (msg, opts) {
 };
 
 Toast.prototype._show = function _show (msg, opts, type) {
-  var _opts = Object.assign({}, this.opts, opts);
+  var _opts = assign({}, this.opts, opts);
   var t = new Toast$2({
     target: document.querySelector('body'),
     data: {

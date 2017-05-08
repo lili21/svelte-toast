@@ -1,3 +1,4 @@
+import assign from 'object-assign'
 import _Toast from './src/toast.svelte'
 
 class Toast {
@@ -25,7 +26,7 @@ class Toast {
   }
 
   _show (msg, opts, type) {
-    const _opts = Object.assign({}, this.opts, opts)
+    const _opts = assign({}, this.opts, opts)
     const t = new _Toast({
       target: document.querySelector('body'),
       data: {
