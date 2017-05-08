@@ -6,6 +6,7 @@
   "author": "li.li",
   "license": "MIT",
   "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^2.28.0",
@@ -19,6 +20,7 @@
   "scripts": {
     "start": "webpack --progress --watch --config webpack.dev.js",
     "server": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "build": "rm -rf dist && webpack --config webpack.prod.js",
+    "deploy": "npm run build && surge ./dist"
   }
 }

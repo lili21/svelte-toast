@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
@@ -39,6 +40,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'index.html'
-    })
+    }),
+    new CopyWebpackPlugin([{
+      from: 'CNAME'
+    }])
   ]
 }
