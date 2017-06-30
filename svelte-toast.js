@@ -201,6 +201,15 @@ var template = (function () {
   }
 }());
 
+var added_css = false;
+function add_css () {
+	var style = createElement( 'style' );
+	style.textContent = "\n  [svelte-17148720].toast-container, [svelte-17148720] .toast-container {\n    position: fixed;\n    z-index: 999;\n  }\n  [svelte-17148720].top, [svelte-17148720] .top {\n    top: 15px;\n  }\n  [svelte-17148720].bottom, [svelte-17148720] .bottom {\n    bottom: 15px;\n  }\n  [svelte-17148720].left, [svelte-17148720] .left {\n    left: 15px;\n  }\n  [svelte-17148720].right, [svelte-17148720] .right {\n    right: 15px;\n  }\n  [svelte-17148720].center, [svelte-17148720] .center {\n    left: 50%;\n    transform: translateX(-50%);\n    -webkit-transform: translateX(-50%);\n  }\n  [svelte-17148720].toast, [svelte-17148720] .toast {\n    height: 38px;\n    line-height: 38px;\n    padding: 0 20px;\n    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);\n    color: #FFF;\n    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;\n    transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s;\n    -webkit-transform: translateY(35px);\n    transform: translateY(35px);\n    opacity: 0;\n    max-width: 200px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  [svelte-17148720].info, [svelte-17148720] .info {\n    background-color: #0091EA;\n  }\n  [svelte-17148720].success, [svelte-17148720] .success {\n    background-color: #4CAF50;\n  }\n  [svelte-17148720].error, [svelte-17148720] .error {\n    background-color: #F44336;\n  }\n  [svelte-17148720].default, [svelte-17148720] .default {\n    background-color: #353535;\n  }\n  [svelte-17148720].anim, [svelte-17148720] .anim {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    transform: translateY(0);\n  }\n";
+	appendNode( style, document.head );
+
+	added_css = true;
+}
+
 function create_main_fragment ( state, component ) {
 	var div_class_value, div_1_class_value, text_value;
 
@@ -256,6 +265,7 @@ function Toast$2 ( options ) {
 	this._yield = options._yield;
 
 	this._torndown = false;
+	if ( !added_css ) { add_css(); }
 
 	this._fragment = create_main_fragment( this._state, this );
 	if ( options.target ) { this._fragment.mount( options.target, null ); }

@@ -15,7 +15,6 @@ yarn add svelte-toast
 
 ```
 import Toast from 'svelte-toast'
-import 'svelte-toast/style.css'
 
 const toast = new Toast([opts])
 toast.show('Hello Svelte'[, opts])

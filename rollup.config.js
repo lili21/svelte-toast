@@ -9,9 +9,9 @@ export default {
   plugins: [
     svelte({
       include: 'src/*.svelte',
-      css: function (css) {
-        fs.writeFileSync('style.css', css)
-      }
+      // css: function (css) {
+      //   fs.writeFileSync('style.css', css)
+      // }
     }),
     buble()
   ]
