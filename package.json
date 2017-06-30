@@ -1,6 +1,6 @@
 {
   "name": "svelte-toast",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "simple toast, write by svelte",
   "main": "svelte-toast.js",
   "repository": "git@github.com:lili21/svelte-toast.git",
