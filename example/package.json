@@ -6,11 +6,11 @@
   "author": "li.li",
   "license": "MIT",
   "dependencies": {
-    "svelte-toast": "^0.1.2"
+    "svelte-toast": "1.0.0"
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html && cp CNAME dist/",
     "deploy": "npm run build && surge ./dist"
   },
   "devDependencies": {
