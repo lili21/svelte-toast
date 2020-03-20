@@ -1,6 +1,6 @@
 {
   "name": "svelte-toast",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "simple toast, write by svelte",
   "main": "dist/svelte-toast.mjs",
   "repository": "git@github.com:lili21/svelte-toast.git",
@@ -39,5 +39,7 @@
     "prepublishOnly": "npm run build",
     "release": "standard-version"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
