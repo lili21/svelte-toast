@@ -2,24 +2,42 @@
   "name": "svelte-toast",
   "version": "0.2.0",
   "description": "simple toast, write by svelte",
-  "main": "svelte-toast.js",
+  "main": "dist/svelte-toast.mjs",
   "repository": "git@github.com:lili21/svelte-toast.git",
   "author": "li.li",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "rollup": "^0.41.6",
-    "rollup-plugin-buble": "^0.15.0",
-    "rollup-plugin-svelte": "^1.8.1"
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "rollup": "^2.1.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-svelte": "^5.1.1",
+    "standard-version": "^7.1.0",
+    "svelte": "^3.20.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
   },
   "scripts": {
     "build": "rollup --config rollup.config.js",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release": "standard-version"
   },
-  "dependencies": {
-    "object-assign": "^4.1.1"
-  }
+  "files": ["dist"]
 }

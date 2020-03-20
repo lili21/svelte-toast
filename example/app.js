@@ -1,7 +1,4 @@
-import 'svelte-toast/style.css'
-import './app.css'
-
-import Toast from 'svelte-toast'
+import Toast from '../dist/svelte-toast.mjs'
 
 function ready (fn) {
   document.addEventListener('DOMContentLoaded', fn)
@@ -15,7 +12,6 @@ ready(function () {
     e.preventDefault()
     if (e.target.classList.contains('toast-btn')) {
       const r = Math.random()
-      // toast.success('Hello Svelte Toast')
       if (r < 0.25) {
         toast.show('Toast -- toast.show')
       } else if (r < 0.5) {
@@ -28,4 +24,3 @@ ready(function () {
     }
   })
 })
-

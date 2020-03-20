@@ -5,22 +5,15 @@
   "main": "index.js",
   "author": "li.li",
   "license": "MIT",
-  "devDependencies": {
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.1",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "html-webpack-plugin": "^2.28.0",
-    "style-loader": "^0.17.0",
-    "webpack": "^2.5.0",
-    "webpack-dev-server": "^2.4.5"
-  },
   "dependencies": {
     "svelte-toast": "^0.1.2"
   },
   "scripts": {
-    "start": "webpack --progress --watch --config webpack.dev.js",
-    "server": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "rm -rf dist && webpack --config webpack.prod.js",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "deploy": "npm run build && surge ./dist"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }

@@ -1,18 +1,20 @@
-import * as fs from 'fs'
-import buble from 'rollup-plugin-buble'
+import babel from 'rollup-plugin-babel'
 import svelte from 'rollup-plugin-svelte'
+import resolve from '@rollup/plugin-node-resolve'
 
 export default {
-  entry: 'index.js',
-  dest: 'svelte-toast.js',
-  format: 'cjs',
+  input: 'src/index.js',
+  output: {
+    file: 'dist/svelte-toast.mjs',
+    format: 'esm'
+  },
   plugins: [
     svelte({
-      include: 'src/*.svelte',
-      // css: function (css) {
-      //   fs.writeFileSync('style.css', css)
-      // }
+      include: 'src/*.svelte'
     }),
-    buble()
+    resolve(),
+    babel({
+      exclude: ['node_modules/**']
+    })
   ]
 }

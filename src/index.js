@@ -1,12 +1,11 @@
-import assign from 'object-assign'
-import _Toast from './src/toast.svelte'
+import _Toast from './toast.svelte'
 
-class Toast {
+export default class Toast {
   constructor (opts) {
-    this.opts = opts || {
+    this.opts = Object.assign({
       position: 'bottom-center',
       duration: 2000
-    }
+    }, opts)
   }
 
   show (msg, opts = {}) {
@@ -26,24 +25,22 @@ class Toast {
   }
 
   _show (msg, opts, type) {
-    const _opts = assign({}, this.opts, opts)
+    const _opts = Object.assign({}, this.opts, opts)
     const t = new _Toast({
       target: document.querySelector('body'),
-      data: {
+      props: {
         msg,
         type,
-        postion: _opts.postion
+        position: _opts.position
       }
     })
 
     setTimeout(() => {
-      t.set({ type: t.get('type') + ' ' + 'anim' })
+      t.$set({ type: type + ' ' + 'anim' })
     }, 0)
 
     setTimeout(() => {
-      t.destroy()
+      t.$destroy()
     }, _opts.duration)
   }
 }
-
-export default Toast

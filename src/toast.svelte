@@ -1,20 +1,12 @@
-<div class="toast-container {{_position}}">
-  <div class="toast {{type}}">{{msg}}</div>
+<div class="toast-container {_position}">
+  <div class="toast {type}">{msg}</div>
 </div>
 
 <script>
-  export default {
-    data () {
-      return {
-        msg: '',
-        type: '',
-        position: 'bottom-center'
-      }
-    },
-    computed: {
-      _position (position) { return position.split('-').join(' ') }
-    }
-  }
+  export let msg = ''
+  export let type = ''
+  export let position = 'bottom-center'
+  $: _position = position.split('-').join(' ')
 </script>
 
 <style>
