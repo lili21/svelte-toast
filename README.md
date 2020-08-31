@@ -1,5 +1,5 @@
 # svelte-toast
-> a simple toast wirten by svelte
+> a simple toast written by svelte
 
 ### Demo
 
