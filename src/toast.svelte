@@ -1,12 +1,14 @@
 <div class="toast-container {_position}">
-  <div class="toast {type}">{msg}</div>
+  <div class="toast {type}" style={_style}>{msg}</div>
 </div>
 
 <script>
   export let msg = ''
   export let type = ''
   export let position = 'bottom-center'
+  export let borderRadius = 0
   $: _position = position.split('-').join(' ')
+  $: _style = `border-radius: ${borderRadius}px`
 </script>
 
 <style>

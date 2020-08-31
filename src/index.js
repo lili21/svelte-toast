@@ -4,7 +4,8 @@ export default class Toast {
   constructor (opts) {
     this.opts = Object.assign({
       position: 'bottom-center',
-      duration: 2000
+      duration: 2000,
+      borderRadius: 0
     }, opts)
   }
 
@@ -31,7 +32,7 @@ export default class Toast {
       props: {
         msg,
         type,
-        position: _opts.position
+        ..._opts
       }
     })
 
